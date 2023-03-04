@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Ohanote</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="left_box">
+    <div id="statusbar">
+      <ul class="progress_bar">
+        <li class="confirmed">Shopping</li>
+        <li class="active">Billing</li>
+        <li>Confirmation</li>
+      </ul>
+    </div>
+    <div id="payment_method">
+      <h2>
+        Payment Method
+      </h2>
+      <form action="">
+        <input type="radio" name="method" id="Card">
+        <label for="Card"><img src="./imgs/icons/credit-card.png" alt=""></label>
+        <input type="radio" name="method" id="Paypal">
+        <label for="Paypal"><img src="./imgs/icons/paypal-logo.png" alt=""></label>
+      </form>
+    </div>
+    <div id="payment_details">
+      <h2>
+        Payment Details
+      </h2>
+      <form action="">
+        <input type="text" placeholder="Enter Name on Credit Card">
+        <input type="text" placeholder="Card Number" data-mask="0000 0000 0000 0000">
+        <div class="card_info">
+          <input type="text" placeholder="Expiration" data-mask="00/00">
+          <input type="text" placeholder="CVC" data-mask="000">
+        </div>
+        <span>By clicking "Confirm Payment" I agree to the company's <a href="">Terms of Service</a></span>
+        <div class="buttons">
+          <button>
+            Back
+          </button>
+          <input type="submit" name="" id="" value="Confirm Payment">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="right_box">
+    <div class="inner_rightbox">
+      <div class="description">
+        <h2>Beats Headphones</h2>
+        <span class="price">
+          $198.88
+        </span>
+      </div>
+      <img src="./imgs/product.png" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+  </footer>
+</body>
+
+</html>

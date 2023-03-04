@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins";
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+
+.left_box {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 5vh;
+  padding: 5vh;
+  max-width: 500px;
+}
+
+/* PROGRESS BAR */
+
+.progress_bar li {
+  list-style-type: none;
+  float: left;
+  width: 33%;
+  position: relative;
+  text-align: center;
+}
+
+.progress_bar li:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+.progress_bar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+
+  top: 8px;
+  left: -50%;
+
+  z-index: -1;
+}
+
+.progress_bar li:first-child:after {
+  content: none;
+}
+
+.progress_bar li.confirmed {
+  color: green;
+}
+
+.progress_bar li.confirmed::before {
+  background-color: green;
+}
+
+.progress_bar li.confirmed + li:after {
+  background-color: green;
+}
+
+.progress_bar li.active {
+  color: green;
+}
+
+.progress_bar li.active::before {
+  border-color: green;
+}
+
+/* PAYMENT METHOD */
+
+#payment_method form {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+#payment_method form label img {
+  height: 2em;
+}
+
+/* PAYMENT DETAILS */
+
+#payment_details {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+#payment_details form {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 100%;
+}
+
+#payment_details form input {
+  padding: 5px;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#payment_details form span {
+  font-size: 0.8em;
+}
+
+#payment_details form .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#payment_details form .buttons button {
+  width: 30%;
+  padding: 5px;
+  border: 1px solid #4e4e4e;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#payment_details form .buttons input[type="submit"] {
+  width: 66%;
+  padding: 5px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* RIGHT BOX */
+
+.right_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 500px;
+}
+
+.right_box .inner_rightbox {
+  padding: 5vh;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #ddd;
+  justify-content: space-between;
+}
+
+.right_box .inner_rightbox img {
+  width: 100%;
+}
